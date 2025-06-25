@@ -1,0 +1,11 @@
+# Ignore entire virtual environment contents
+.venv/**
+
+# But keep useful metadata/config files
+!.venv/pyvenv.cfg
+!.venv/.gitignore
+
+
+
+# Ignore VS Code workspace settings
+.vscode/
