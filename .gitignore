@@ -1,11 +1,30 @@
-# Ignore entire virtual environment contents
-.venv/**
+# Ignore Python virtual environments (both .venv and venv folders)
+.venv/
+venv/
 
-# But keep useful metadata/config files
+# Optionally keep metadata (use only if needed)
 !.venv/pyvenv.cfg
-!.venv/.gitignore
 
+# Ignore environment files
+.env
+.env.*
 
-
-# Ignore VS Code workspace settings
+# Ignore IDE folders
 .vscode/
+.idea/
+
+# Ignore common Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore macOS and system files
+.DS_Store
+Thumbs.db
+
+# Ignore system/build folders
+etc/
+Lib/
+Include/
+Scripts/
+share/
