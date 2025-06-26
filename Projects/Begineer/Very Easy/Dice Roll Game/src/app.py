@@ -94,4 +94,3 @@ Random_Dices = [One , Two , Three , Four , Five , Six]
 Random_Dice_Roll = np.random.choice(Random_Dices) #using numpy random choice (best and fast by performence)
 print(f"Here the roll : \n")
 print(Random_Dice_Roll)
-
