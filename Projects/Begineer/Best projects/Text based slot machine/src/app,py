@@ -1,0 +1,56 @@
+#Text based slot machince
+import random #import random module
+import pytest #import pytest module
+import cs50
+print("Welcome to Text Based Slot Machine!\n") #Print welcome messege
+
+def deposit() : #deposit function define
+    try:
+            dollers = int(input("Enter how many dollers you'd like to deposit\n> $")) #ask how many dollers user would like to deposit
+            while True:
+                if dollers > 0:
+                    break
+                return dollers
+
+
+
+            print( f"You deposited ${dollers}\nBy playing this game you agreed to text based slot machine terms and conditions and you are 18+")
+
+
+    except ValueError:
+            print(f"{dollers} is invalid")
+
+def play() :
+        try :
+            start = input("Press 'enter' to play and type 'q' to end\n>")
+            if start == 'q' :
+                    print("Thanks!")
+            elif start == '':
+                    return ''
+        except ValueError :
+                print(f"{start} is not valid. COMMENT - INVALID INPUT")
+                while start != 'q' or start != '':
+                    start = input("Press 'enter' to play and type 'q' to end\n>")
+
+def bet_lines () :
+    lines = int(input("How many lines you'd like to bet on ? \n>"))
+    try:
+            if lines == 3:
+                return f"You started with 3 lines!"
+                pass
+            elif lines == 2:
+                return "Still creating!!!"
+                pass
+            elif lines == 1 :
+                return "Betting on 1 line is invalid"
+                pass
+    except ValueError:
+        print(f"{lines} is not valid")
+        while lines == 1 or lines <=0 or lines == '':
+            lines = input("How many lines you'd like to bet on ? \n>")
+            bet_lines()
+
+#call functions
+print(deposit())
+print(play())
+print(bet_lines())
